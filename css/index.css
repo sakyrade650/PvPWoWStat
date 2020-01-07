@@ -1,0 +1,200 @@
+@font-face {
+    font-family: CM Literata;
+    src: url('../fonts/17849.ttf');
+}
+
+@font-face {
+    font-family: SiteStyle;
+    src: url('../fonts/17775.ttf');
+}
+
+@font-face {
+    font-family: SiteStyle2;
+    src: url('../fonts/17789.ttf');
+}
+
+/* шрифты */
+
+/* html */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #222127;
+}
+
+/* шапка */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: rgba(73, 88, 116, 0.514);  
+    padding: 20px;
+    float: left;
+    z-index: 5555;
+}
+
+#logoSite h1 {
+    font-family: CM Literata;
+    font-style: italic;
+    font-size: 45px;
+    color: rgb(143, 148, 188);
+    display: inline-block;
+}
+
+#logoSite {
+    margin: 0;
+    padding : 10px;
+    width: 450px;
+    height: 110px;
+    position: relative;
+    float: left;
+}
+
+/* Навигационное меню */
+
+/* задаем цвет фона для контейнера nav. */
+
+nav {
+	font-family: SiteStyle2;
+	margin: 30px 0px;
+	position: relative;
+    float: left;
+    font-style: italic;
+    width: 401px;
+    background-color: #2f2f2f;
+    border: 1px solid #3d3d3d;
+}
+			
+/* убираем отступы и поля, а также list-style для "ul", 
+* и добавляем "position:relative" */
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+    position: relative;
+}
+
+/* применяем inline-block позиционирование к элементам навигации */
+			
+nav ul li {
+	margin: 0px -8px 0 0;
+    display: inline-block;
+}
+			
+/* стилизуем ссылки */
+			
+nav a {
+	transition: 0.5s;
+	display: block;
+	padding: 0 15px;
+	color:#FFF;
+	font-size: 20px;
+	line-height: 60px;
+    text-decoration: none;
+    border: 1px solid #3d3d3d;
+}
+			
+nav a:hover {
+	background-color: #000000;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+    top: 100%;
+    background-color: #2f2f2f;
+}
+			
+/* отображаем выпадающий список при наведении */
+			
+nav ul li:hover > ul {
+	display: inherit;
+}
+			
+/* первый уровень выпадающего списка */
+			
+nav ul ul li {
+	min-width: 135px;
+	float: none;
+	display: list-item;
+    position: relative;
+    background-color: #2f2f2f;
+}
+
+nav ul ul ul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+li > a:after { content:  '+'; }
+		
+li > a:only-child:after { content: ''; }
+
+/* Кнопка "Вход" */
+
+#buttonSignIn {
+    font-family: SiteStyle2;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    float: right;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    margin: 40px;
+    right: 40px;
+    background-color: #2f2f2f;
+    border: 2px solid #3d3d3d;
+}
+
+label {
+    text-align: left;
+    color: #FFF;
+    display: block;
+    float: right;
+    position: relative;
+    right: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* Блок с PvP статистикой по всем серверам */
+
+.statForAll {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.statForAll h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: SiteStyle2;
+}
+
+.statForAll table {
+    border: 1px solid red;
+    position: relative;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 500px;
+    height: 600px;
+}
+
+table td {
+    border: 1px solid red;
+}

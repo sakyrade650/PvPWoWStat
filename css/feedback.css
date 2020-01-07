@@ -1,0 +1,215 @@
+@font-face {
+    font-family: CM Literata;
+    src: url('../fonts/17849.ttf');
+}
+
+@font-face {
+    font-family: SiteStyle;
+    src: url('../fonts/17775.ttf');
+}
+
+@font-face {
+    font-family: SiteStyle2;
+    src: url('../fonts/17789.ttf');
+}
+
+/* шрифты */
+
+/* html */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #222127;
+}
+
+/* шапка */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: rgba(73, 88, 116, 0.514);  
+    padding: 20px;
+    float: left;
+    z-index: 5555;
+}
+
+#logoSite h1 {
+    font-family: CM Literata;
+    font-style: italic;
+    font-size: 45px;
+    color: rgb(143, 148, 188);
+    display: inline-block;
+}
+
+#logoSite {
+    margin: 0;
+    padding : 10px;
+    width: 450px;
+    height: 110px;
+    position: relative;
+    float: left;
+}
+
+#logo {
+    border-radius: 70px;
+    background-image: url('../img/logoSite.jpg');
+	background-repeat: no-repeat;
+    background-position: left;
+    background-size: 120px;
+    width: 112px;
+    height: 112px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+/* Навигационное меню */
+
+/* задаем цвет фона для контейнера nav. */
+
+nav {
+	font-family: SiteStyle2;
+	margin: 30px 100px;
+	position: relative;
+    float: left;
+    font-style: italic;
+    width: 413px;
+    border-radius: 20px;
+}
+			
+/* убираем отступы и поля, а также list-style для "ul", 
+* и добавляем "position:relative" */
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+    position: relative;
+    border-radius: 20px;
+}
+
+/* применяем inline-block позиционирование к элементам навигации */
+			
+nav ul li {
+	margin: 0px -8px 0 0;
+	display: inline-block;
+    border-radius: 20px;
+}
+			
+/* стилизуем ссылки */
+			
+nav a {
+	transition: 0.5s;
+	display: block;
+	padding: 0 15px;
+	color:#FFF;
+	font-size: 20px;
+	line-height: 60px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+			
+nav a:hover {
+	background-color: #000000;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+			
+/* отображаем выпадающий список при наведении */
+			
+nav ul li:hover > ul {
+	display: inherit;
+}
+			
+/* первый уровень выпадающего списка */
+			
+nav ul ul li {
+	min-width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+nav ul ul ul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+li > a:after { content:  '+'; }
+		
+li > a:only-child:after { content: ''; }
+
+/* Кнопка "Вход" */
+
+#buttonSignIn {
+    font-family: SiteStyle2;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    float: right;
+    width: 106px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    border: solid 2px #FFF;
+    color: #FFF;
+    margin: 40px;
+    right: 40px;
+}
+
+#buttonSignIn:hover {
+    color: rgb(62, 101, 160);
+    transition: 0.5s;
+    background-color: #FFF;
+}
+
+/* Обратная связь */
+
+.form-control {
+    margin-top: 10px;
+    float: left;
+    padding: 0;
+    width: 600px;
+    border-radius: 10px;
+    height: 30px;
+    font-family: SiteStyle;
+}
+
+form {
+    position: relative;
+    margin: 0px auto;
+    width: 600px;
+}
+
+form h1 {
+    font-family: SiteStyle2;
+    color: #FFF;
+    text-align: center;
+    line-height: 100px;
+}
+
+#buttonSend {
+    margin-top: 10px;
+    font-family: SiteStyle2;
+    position: relative;
+    border-radius: 10px;
+    width: 106px;
+    height: 40px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    border: solid 2px #FFF;
+    color: rgb(255, 255, 255);
+}
